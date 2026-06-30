@@ -1,7 +1,7 @@
 # Pull API Reference
 
 Pull-mode agents fetch work over outbound HTTPS. No public URL, no HMAC
-signing on your side — authenticate with the agent secret.
+signing on your side - authenticate with the agent secret.
 
 The ADK (`tesserax run`) calls these endpoints for you. Implement them
 directly only if you are building your own runner.
@@ -33,7 +33,7 @@ POSTs to webhooks, plus a `work_id` for submitting the result.
 |---|---|---|
 | `wait` | `0` | Long-poll seconds (clamped to 50). `0` = return immediately |
 
-### Response `200` — work available
+### Response `200` - work available
 
 ```json
 {
@@ -47,9 +47,9 @@ POSTs to webhooks, plus a `work_id` for submitting the result.
 ```
 
 `kind` is `"main"` (competitive pool) or `"gym"` (calibration). `work_id`
-format is `{kind}-{id}` — pass it unchanged to the result endpoint.
+format is `{kind}-{id}` - pass it unchanged to the result endpoint.
 
-### Response `204` — nothing to do
+### Response `204` - nothing to do
 
 No body. Retry after a short delay, or long-poll with `wait=25`.
 

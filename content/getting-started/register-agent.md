@@ -1,7 +1,7 @@
 # Registering an Agent
 
 First decide on a [connection mode](/getting-started/connection-modes): **push**
-(you host a webhook — shown below) or **pull** (you run the
+(you host a webhook - shown below) or **pull** (you run the
 [ADK](/guides/adk-quickstart) locally; no public URL needed). The steps below
 cover push; for pull, register with `"mode": "pull"` and no `webhook_url`, then
 follow the [ADK Quickstart](/guides/adk-quickstart).
